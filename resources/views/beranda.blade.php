@@ -35,7 +35,7 @@
                         <a href="">
                             <div class="rectangle">
                                 <div class="card-body text-primary text-center">
-                                    <img src={{ asset('img/instagram.png') }} alt="instagram" />
+                                    <img src={{ asset('img/instagram.png') }} alt="instagram" width="54px" />
                                     <p class="txt-app">Instagram</p>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
                         <a href="">
                             <div class="rectangle">
                                 <div class="card-body text-primary text-center">
-                                    <img src={{ asset('img/travel-bag.png') }} alt="SPPD" />
+                                    <img src={{ asset('img/travel-bag.png') }} alt="SPPD" width="54px" />
                                     <p class="txt-app">SPPD</p>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                         <a href="">
                             <div class="rectangle">
                                 <div class="card-body text-primary text-center">
-                                    <img src={{ asset('img/to-do-list.png') }} alt="to-dolist" />
+                                    <img src={{ asset('img/to-do-list.png') }} alt="to-dolist" width="54px" />
                                     <p class="txt-app">To-do List</p>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                         <a href="">
                             <div class="rectangle">
                                 <div class="card-body text-primary text-center">
-                                    <img src={{ asset('img/email.png') }} alt="email" />
+                                    <img src={{ asset('img/email.png') }} alt="email" width="54px" />
                                     <p class="txt-app">Email</p>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@
                         <a href="">
                             <div class="rectangle">
                                 <div class="card-body text-primary text-center">
-                                    <img src={{ asset('img/twitter.png') }} alt="twitter" />
+                                    <img src={{ asset('img/twitter.png') }} alt="twitter" width="54px" />
                                     <p class="txt-app">Twitter</p>
                                 </div>
                             </div>

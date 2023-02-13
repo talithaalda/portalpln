@@ -28,7 +28,7 @@
                 <div class="offcanvas-body" style="margin-left: 25px; margin-right: 35px">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item {{ $active == 'aplikasi' ? 'active' : ' ' }}">
-                            <a href="#">
+                            <a href="/aplikasi">
                                 <img src="{{ asset('img/aplikasi.png') }}" alt="aplikasi" class="icon" />
                                 <span class="txt-item">Aplikasi</span>
                             </a>
@@ -40,13 +40,13 @@
                             </a>
                         </li>
                         <li class="nav-item {{ $active == 'pengumuman' ? 'active' : ' ' }}">
-                            <a href="#">
+                            <a href="/pengumuman">
                                 <img src={{ asset('img/pengumuman.png') }} alt="aplikasi" class="icon" />
                                 <span class="txt-item">Pengumuman</span>
                             </a>
                         </li>
                         <li class="nav-item {{ $active == 'artikel' ? 'active' : ' ' }}">
-                            <a href="#">
+                            <a href="/artikel">
                                 <img src={{ asset('img/artikel.png') }} alt="aplikasi" class="icon" />
                                 <span class="txt-item">Artikel</span>
                             </a>
@@ -58,7 +58,7 @@
                             </a>
                         </li>
                         <li class="nav-item {{ $active == 'kotakide' ? 'active' : ' ' }}">
-                            <a href="#">
+                            <a href="/kotakide-calendar">
                                 <img src={{ asset('img/kotakide.png') }} alt="aplikasi" class="icon" />
                                 <span class="txt-item">Kotak Ide</span>
                             </a>
@@ -71,8 +71,8 @@
             <!-- <a class="navbar-brand" href="#">Offcanvas navbar</a> -->
         </div>
         <div class="right-navbar">
-            <a class="navbar-brand {{ $active == 'beranda' ? 'active' : ' ' }}" href="/">Beranda</a>
-            <a class="navbar-brand" href="/aplikasi">APLIKASI</a>
+            <a class="navbar-brand {{ $active == 'beranda' ? 'active' : ' ' }}" href="/"> BERANDA</a>
+            <a class="navbar-brand {{ $active == 'aplikasi' ? 'active' : ' ' }}" href="/aplikasi">APLIKASI</a>
             <a class="navbar-brand" href="/tentang">TENTANG</a>
             <a class="btn btn-blue login" type="button" href="" data-bs-toggle="modal"
                 data-bs-target="#loginpopup">LOGIN</a>

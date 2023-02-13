@@ -6,7 +6,7 @@
     <div class="position-relative">
         <div class="container-search position-absolute bottom-0 start-50 top-0 translate-middle-x">
             <h6 style="font-weight: 500;
-            font-size: 22px;">Cari Publikasi</h6>
+            font-size: 22px;">Cari Artikel</h6>
             <div class="col-sm-12">
                 <div class="search">
                     <i class="fa fa-search" style="color:  #88888C; font-size: 20px"></i>
@@ -18,23 +18,22 @@
     </div>
 
 
-    {{-- PUBLIKASI TERKINI --}}
+    {{-- ARTIKEL TERKINI --}}
     <div class="two-colums px-4 text-left" style="margin-top: 120px">
         <div class="row gx-5">
             <div class="col-md-7">
                 <div class="margin-title">
-                    <span class="txt-title">PUBLIKASI TERKINI</span>
+                    <span class="txt-title">ARTIKEL TERKINI</span>
                     <a href=""></a>
                 </div>
-                <a href="publikasi/detailpublikasi">
+                <a href="/artikel/detailartikel">
                     <div class="row no-gutters card-publikasi">
                         <div class="col-md-4 g-0 ">
                             <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
                         </div>
                         <div class="col-md-8 card-body-publikasi">
                             <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">Melompat Lebih Tinggi Untuk
-                                    Mencapai Kurva Baru PJB - Edisi 123
+                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
                                 </h5>
                                 <h6 class="text-muted">10 Januari 2023</h6>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
@@ -45,15 +44,14 @@
                         </div>
                     </div>
                 </a>
-                <a href="publikasi/detailpublikasi">
+                <a href="/artikel/detailartikel">
                     <div class="row no-gutters card-publikasi">
                         <div class="col-md-4 g-0">
                             <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
                         </div>
                         <div class="col-md-8 card-body-publikasi">
                             <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">Melompat Lebih Tinggi Untuk
-                                    Mencapai Kurva Baru PJB - Edisi 123
+                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
                                 </h5>
                                 <h6 class="text-muted">10 Januari 2023</h6>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
@@ -64,15 +62,14 @@
                         </div>
                     </div>
                 </a>
-                <a href="publikasi/detailpublikasi">
+                <a href="/artikel/detailartikel">
                     <div class="row no-gutters card-publikasi">
                         <div class="col-md-4 g-0">
                             <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
                         </div>
                         <div class="col-md-8 card-body-publikasi">
                             <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">Melompat Lebih Tinggi Untuk
-                                    Mencapai Kurva Baru PJB - Edisi 123
+                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
                                 </h5>
                                 <h6 class="text-muted">10 Januari 2023</h6>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
@@ -83,15 +80,14 @@
                         </div>
                     </div>
                 </a>
-                <a href="publikasi/detailpublikasi">
+                <a href="/artikel/detailartikel">
                     <div class="row no-gutters card-publikasi">
                         <div class="col-md-4 g-0">
                             <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
                         </div>
                         <div class="col-md-8 card-body-publikasi">
                             <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">Melompat Lebih Tinggi Untuk
-                                    Mencapai Kurva Baru PJB - Edisi 123
+                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
                                 </h5>
                                 <h6 class="text-muted">10 Januari 2023</h6>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
@@ -102,15 +98,14 @@
                         </div>
                     </div>
                 </a>
-                <a href="publikasi/detailpublikasi">
+                <a href="/artikel/detailartikel">
                     <div class="row no-gutters card-publikasi">
                         <div class="col-md-4 g-0 ">
                             <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
                         </div>
                         <div class="col-md-8 card-body-publikasi">
                             <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">Melompat Lebih Tinggi Untuk
-                                    Mencapai Kurva Baru PJB - Edisi 123
+                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
                                 </h5>
                                 <h6 class="text-muted">10 Januari 2023</h6>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
@@ -121,15 +116,14 @@
                         </div>
                     </div>
                 </a>
-                <a href="publikasi/detailpublikasi">
+                <a href="/artikel/detailartikel">
                     <div class="row no-gutters card-publikasi">
                         <div class="col-md-4 g-0">
                             <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
                         </div>
                         <div class="col-md-8 card-body-publikasi">
                             <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">Melompat Lebih Tinggi Untuk
-                                    Mencapai Kurva Baru PJB - Edisi 123
+                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
                                 </h5>
                                 <h6 class="text-muted">10 Januari 2023</h6>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
@@ -140,15 +134,14 @@
                         </div>
                     </div>
                 </a>
-                <a href="publikasi/detailpublikasi">
+                <a href="/artikel/detailartikel">
                     <div class="row no-gutters card-publikasi">
                         <div class="col-md-4 g-0 ">
                             <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
                         </div>
                         <div class="col-md-8 card-body-publikasi">
                             <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">Melompat Lebih Tinggi Untuk
-                                    Mencapai Kurva Baru PJB - Edisi 123
+                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
                                 </h5>
                                 <h6 class="text-muted">10 Januari 2023</h6>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
@@ -230,6 +223,5 @@
 
             </div>
         </div>
-
     </div>
 @endsection

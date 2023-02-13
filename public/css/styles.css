@@ -119,6 +119,9 @@ nav {
     height: 128px;
     border: 1px solid #c6cacc;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
 }
 .card-group {
     gap: 10px;
@@ -126,6 +129,13 @@ nav {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+}
+.txt-app {
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 13px;
+    margin-bottom: 0;
 }
 .all-apps{
     display: flex;
@@ -337,7 +347,7 @@ nav {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    padding: 40px;
+    padding: 50px;
     top: 180px;
     margin-left: auto;
     margin-right: auto;
@@ -404,6 +414,7 @@ nav {
 .card-title-rekom{
     font-weight: 600;
     font-size: 15px;
+
 }
 .publish{
     font-weight: 400;
@@ -572,14 +583,62 @@ nav {
 .img-pub{
     border-radius: 24px;
 }
+.comment{
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+.input-comment{
+    border : 0px solid #000000;
+    border-bottom-width : 1px;
+    background-color : transparent;
+    width: 100%;
+}
+.input-comment:focus{
+    outline: none;
+}
+.container-comment{
+    margin: 40px 0 0 10px
+}
+.menu-ide{
+    margin: 30px 0;
+    gap: 80px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #D7D7D7;
+
+}
+.menu-ide .active{
+    border-bottom: 3px solid #00A2E9;
+}
+.menu{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.app-list{
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+}
+.app-detail{
+    margin: 30px 0px 30px 50px;
+}
+.card-profile{
+    width: 100%;
+    background-color: white;
+    border: 0.3px solid #BAB4B4;
+    border-radius: 24px;
+    padding: 20x;
+}
+
 @media (min-width: 1200px) {
 
-.txt-app {
-    color: black;
-    font-weight: 500;
-    font-size: 15px;
-    margin-top: 13px;
-}
 .header-bod {
     /* max-width: 1000px; */
     padding: 3px 0x 0px 0px;
@@ -596,6 +655,7 @@ nav {
 .card-title{
     font-weight: 500;
     font-size: 20px;
+    margin-bottom: 5px;
 }
 .card-text{
     font-weight: 400;
@@ -606,6 +666,7 @@ nav {
 .margin-right{
     padding-left:70px;
 }
+
 }
 
 @media (min-width: 768px) and (max-width: 1200px){
@@ -614,12 +675,7 @@ nav {
         border-top-right-radius: 10px;
         border-end-end-radius: 10px;
     }
-    .txt-app {
-        color: black;
-        font-weight: 500;
-        font-size: 15px;
-        margin-top: 13px;
-    }
+
 
     .header-bod {
         /* max-width: 1000px; */
@@ -633,10 +689,6 @@ nav {
         font-size: 16px;
         margin-top: 12px;
         color: #FFFFFF;
-    }
-    .card-title{
-        font-weight: 500;
-        font-size: 20px;
     }
     .card-text{
         font-weight: 400;
@@ -654,6 +706,12 @@ nav {
     .icon-desc{
         font-size: 15px;
     }
+    .content-header{
+        font-weight: 800;
+        font-size: 34px;
+        margin-top: 30px;
+    }
+
 }
 
 @media (min-width: 576px) and (max-width: 767.98px){
@@ -682,13 +740,6 @@ nav {
     margin: 20px 0 0 20px;
     }
 
-    .txt-app {
-        color: black;
-        font-weight: 500;
-        font-size: 15px;
-        margin-top: 13px;
-    }
-
     .header-bod {
         /* max-width: 1000px; */
         padding: 3px 0x 0px 0px;
@@ -701,10 +752,6 @@ nav {
         font-size: 16px;
         margin-top: 12px;
         color: #FFFFFF;
-    }
-    .card-title{
-        font-weight: 500;
-        font-size: 20px;
     }
     .card-text{
         font-weight: 400;
@@ -732,6 +779,14 @@ nav {
         box-sizing: border-box;
 
     }
+    .content-header{
+        font-weight: 800;
+        font-size: 34px;
+        margin-top: 30px;
+    }
+    .app-detail{
+        margin: 30px 0px;
+    }
 
 }
 
@@ -757,12 +812,6 @@ nav {
         margin-left: 60px;
         margin-top: 10px;
     }
-    .txt-app {
-        color: black;
-        font-weight: 500;
-        font-size: 15px;
-        margin-top: 13px;
-    }
     .pesanbod{
         padding: 50px 30px;
     }
@@ -783,6 +832,7 @@ nav {
         font-weight: 500;
         font-size: 20px;
         margin-top: 10px;
+        margin-bottom: 5px;
     }
     .card-text{
         font-weight: 400;
@@ -818,6 +868,14 @@ nav {
         padding: 30px 50px;
         box-sizing: border-box;
 
+    }
+    .content-header{
+        font-weight: 800;
+        font-size: 34px;
+        margin-top: 30px;
+    }
+    .app-detail{
+        margin: 30px 0px;
     }
 }
 

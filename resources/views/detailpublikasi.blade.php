@@ -73,7 +73,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="comment">
+                    <img src={{ asset('img/logo.png') }} alt="" width="200px">
+                    <div class="container-comment">
+                        <input type="text" class="input-comment" placeholder="Masukan Komentar">
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 
@@ -82,7 +89,7 @@
         <div class="col g-0">
             <div class="txt-title-right" style="margin: 100px 0 20px 12px">Rekomendasi</div>
         </div>
-        <div class="col gap-3 rekomendasi-group">
+        <div class="col gap-4 rekomendasi-group mb-4">
             <div class="card-rekomendasi card" style="width: 13rem;">
                 <img src={{ asset('img/publikasi1.png') }} class="card-img-top" alt="...">
                 <div class="mt-3">
@@ -118,13 +125,7 @@
                     <p class="publish">Dipublikasikan 22 Juni 2021</p>
                 </div>
             </div>
-            <div class="card-rekomendasi card" style="width: 13rem;">
-                <img src={{ asset('img/publikasi1.png') }} class="card-img-top" alt="...">
-                <div class="mt-3">
-                    <h5 class="card-title-rekom">Dirut PLN : "PJB Harus Terus Kembangkan Teknologi" - Edisi 122</h5>
-                    <p class="publish">Dipublikasikan 22 Juni 2021</p>
-                </div>
-            </div>
+
         </div>
     </div>
 @endsection
