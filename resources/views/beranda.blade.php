@@ -82,9 +82,7 @@
             </div>
 
             {{-- AGENDA KORPORAT --}}
-
-
-            <div class="col-md-5 margin-right mb-4">
+            <div class="col-md-5 margin-right mb-4 mob-mb">
                 <h3 class="txt-title-right">AGENDA KORPORAT</h3>
 
                 <body class="light">
@@ -308,7 +306,7 @@
                                                 elit,
                                                 sed do eiusmod
                                                 tempor incididunt ut labore et dolore magna aliqua....</p>
-                                            <a href="" class="mt-2 float-end mb-4 all-apps">Baca Lebih
+                                            <a href="" class="mt-5 float-end mb-4 all-apps">Baca Lebih
                                                 Banyak</a>
                                         </div>
                                     </div>
@@ -332,7 +330,7 @@
                                                 elit,
                                                 sed do eiusmod
                                                 tempor incididunt ut labore et dolore magna aliqua....</p>
-                                            <a href="" class="mt-2 float-end mb-4 all-apps">Baca Lebih
+                                            <a href="" class="mt-5 float-end mb-4 all-apps">Baca Lebih
                                                 Banyak</a>
                                         </div>
                                     </div>
@@ -356,7 +354,7 @@
                                                 elit,
                                                 sed do eiusmod
                                                 tempor incididunt ut labore et dolore magna aliqua....</p>
-                                            <a href="" class="mt-2 float-end mb-4 all-apps">Baca Lebih
+                                            <a href="" class="mt-5 float-end mb-4 all-apps">Baca Lebih
                                                 Banyak</a>
                                         </div>
                                     </div>
@@ -648,9 +646,9 @@
                         </div>
 
                     </div>
-                    <h3 class="mt-3" style="font-weight: 500;
+                    <h3 class="mt-3 " style="font-weight: 500;
                 font-size: 18px;">Dokumen</h3>
-                    <div class="" style="margin-left: 5px">
+                    <div class="mb-5" style="margin-left: 5px">
                         <div class="mt-3 mb-2">
                             <a href="#">
                                 <img src="{{ asset('img/dokumen.png') }}" alt="dokumen" class="icon" />

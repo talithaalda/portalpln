@@ -4,4 +4,6 @@
 @endphp
 
 <p>Status : {{ $news['status'] }}</p>
+<p>Update By : {{ $news['data'][1]['UPDATEDBY'] }}</p>
+<p>Update By : {{ $news['data'][1]['NFID'] }}</p>
 {{-- <p>Messages : {{ $news['message'] }}</p> --}}

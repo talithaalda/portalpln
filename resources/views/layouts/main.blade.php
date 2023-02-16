@@ -27,6 +27,20 @@
                 <img class="logosidebar" src={{ asset('img/logo.png') }} alt="losgo" width="220px" />
                 <div class="offcanvas-body" style="margin-left: 25px; margin-right: 35px">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <div class="sidebar-mobile mt-3">
+                            <li class="nav-item {{ $active == 'aplikasi' ? 'active' : ' ' }}">
+                                <a href="/">
+                                    <img src="{{ asset('img/home.png') }}" alt="aplikasi" class="icon" />
+                                    <span class="txt-item">Beranda</span>
+                                </a>
+                            </li>
+                            <li class="nav-item {{ $active == 'aplikasi' ? 'active' : ' ' }}">
+                                <a href="tentang">
+                                    <img src="{{ asset('img/about.png') }}" alt="aplikasi" class="icon" />
+                                    <span class="txt-item">Tentang</span>
+                                </a>
+                            </li>
+                        </div>
                         <li class="nav-item {{ $active == 'aplikasi' ? 'active' : ' ' }}">
                             <a href="/aplikasi">
                                 <img src="{{ asset('img/aplikasi.png') }}" alt="aplikasi" class="icon" />
@@ -74,8 +88,8 @@
             <a class="navbar-brand {{ $active == 'beranda' ? 'active' : ' ' }}" href="/"> BERANDA</a>
             <a class="navbar-brand {{ $active == 'aplikasi' ? 'active' : ' ' }}" href="/aplikasi">APLIKASI</a>
             <a class="navbar-brand" href="/tentang">TENTANG</a>
-            <a class="btn btn-blue login" type="button" href="" data-bs-toggle="modal"
-                data-bs-target="#loginpopup">LOGIN</a>
+            <button class="btn btn-blue login" type="button" href="" data-bs-toggle="modal"
+                data-bs-target="#loginpopup">LOGIN</button>
 
         </div>
     </nav>

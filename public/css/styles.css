@@ -34,13 +34,14 @@ a {
     text-decoration: none;
     color: #7c7c7a;
 }
-.navbar-nav > .active {
+.navbar-nav > .active, .navbar-nav li:hover {
     text-decoration: none;
     background-color: #bce3f4;
     width: 218px;
     height: 52px;
     border-radius: 10px;
 }
+
 .nav-item .icon {
     margin-right: 16px;
 }
@@ -49,7 +50,7 @@ a {
     font-weight: 500;
     margin-right: 27px;
 }
-.right-navbar .active {
+.right-navbar .active ,.right-navbar a:hover{
     border-bottom: 0.15em solid black;
 }
 
@@ -636,6 +637,9 @@ nav {
     border-radius: 24px;
     padding: 20x;
 }
+.sidebar-mobile{
+    display: none;
+}
 
 @media (min-width: 1200px) {
 
@@ -723,9 +727,13 @@ nav {
         padding-left: 50px;
     }
 
-    .right-navbar {
+    .right-navbar a{
         padding-right: 50px;
-        margin-left: 110px
+        margin-left: 110px;
+        display: none;
+    }
+    .right-navbar button{
+        margin-left: 0px;
     }
 
     .navbar-toggler {
@@ -797,14 +805,17 @@ nav {
         padding-bottom: 15px;
     }
     .left-navbar {
-        padding-left: 50px;
+        padding-left: 20px;
     }
 
-    .right-navbar {
+    .right-navbar a{
         padding-right: 50px;
-        margin-left: 110px
+        margin-left: 110px;
+        display: none;
     }
-
+    .right-navbar button{
+        margin-left: 0px;
+    }
     .card-body-artikel{
         margin: 20px 0 0 20px;
         }
@@ -876,6 +887,25 @@ nav {
     }
     .app-detail{
         margin: 30px 0px;
+    }
+    .mob-mb{
+        margin-top: 30px;
+    }
+    .sidebar-mobile{
+        display: block;
+        border-bottom: 0.3px solid rgb(186, 183, 183);
+        border-top: 0.3px solid rgb(186, 183, 183);
+        margin: 10px 0;
+    }
+    .btn-blue {
+        padding: 6px 20px;
+        box-shadow: 0 4px 5px 0 #0000002e;
+    }
+    .btn-slide{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: auto;
     }
 }
 

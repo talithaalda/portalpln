@@ -93,12 +93,10 @@ body {
 .calendar-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 2px;
     color: var(--color-txt);
 }
 
 .calendar-days div {
-    width: 57.99px;
     height: 35.77px;
     display: flex;
     align-items: center;
@@ -174,11 +172,13 @@ body {
     transition-delay: 0.6s;
 }
 
-.calendar-days div.curr-date,
-.calendar-days div.curr-date:hover {
+ .curr-date,
+ .curr-date:hover {
     background-color: var(--blue);
     color: var(--white);
     border-radius: 50%;
+    width: 36px;
+    margin: 0 12px;
 }
 
 .calendar-days div.curr-date span {
@@ -240,7 +240,6 @@ body {
     background-color: var(--bg-main);
     padding: 20px;
     grid-template-columns: repeat(3, auto);
-    gap: 5px;
     display: grid;
     transform: scale(1.5);
     visibility: hidden;
