@@ -258,23 +258,18 @@
 
     {{-- PESAN BOD --}}
 
-    <div class="margin">
-        <span class="txt-title">PESAN</span>
-        <span class="txt-title-italic">BOARD OF DIRECTORS</span>
-        <div class="pesanbod text-center">
-            <img class="mt-5" src={{ asset('img/chat.png') }} alt="">
-            <p class="header-bod mt-3  text-center">PETUAH (Pesan Untuk Diamanahkan) Edisi Gong Matua Hasibuan
-                (Direktur
-                Utama PT PJB)
-                Vol.3</p>
-            <p class="desc-bod  text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor
-                incididunt ut
-                labore et dolore
-                magna aliqua. Ut enim ad minim veniam,...</p>
-        </div>
+    <a href="pesanbod/0">
+        <div class="margin">
+            <span class="txt-title">PESAN</span>
+            <span class="txt-title-italic">BOARD OF DIRECTORS</span>
+            <div class="pesanbod text-center">
+                <img class="mt-5" src={{ asset('img/chat.png') }} alt="">
+                <p class="header-bod mt-3  text-center">{{ $pesanbod['data'][0]['NFJUDUL'] }}</p>
+                <p class="desc-bod  text-center">{{ substr($pesanbod['data'][0]['NFJUDUL'], 0, 150) }}</p>
+            </div>
 
-    </div>
+        </div>
+    </a>
 
     {{-- PENGUMUMAN --}}
 

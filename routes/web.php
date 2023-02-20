@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\apiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('beranda',[
-        "active"=>'beranda',
-        "title"=>'Beranda'
-    ]);
-});
+
+Route::get('/', [apiController::class,'beranda']);
+
 Route::get('/aplikasi', function () {
     return view('aplikasi',[
         "active"=>'aplikasi',
@@ -110,13 +108,16 @@ Route::get('kotakide/detailkotakide', function () {
 
     ]);
 });
-Route::get('/pesanbod', function () {
-    return view('pesanbod',[
-        "active"=>'pesanbod',
-        "title"=>'Pesan BOD'
+// Route::get('/pesanbod', function () {
+//     return view('pesanbod',[
+//         "active"=>'pesanbod',
+//         "title"=>'Pesan BOD'
 
-    ]);
-});
+//     ]);
+// });
+Route::get('/pesanbod', [apiController::class,'pesanbod']);
+Route::get('/pesanbod/{message:id}',[apiController::class,'showpesanbod']);
+
 Route::get('/login', function () {
     return view('login',[
         "title"=>'Login'

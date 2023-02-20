@@ -48,7 +48,7 @@
                             </a>
                         </li>
                         <li class="nav-item {{ $active == 'pesanbod' ? 'active' : ' ' }}">
-                            <a href="/pesanbod">
+                            <a href="/pesanbod/0">
                                 <img src="{{ asset('img/pesanbod.png') }}" alt="aplikasi" class="icon" />
                                 <span class="txt-item">Pesan BOD</span>
                             </a>
@@ -135,6 +135,7 @@
             </div>
         </div>
     </div>
+
     @yield('container')
     <div class="footer ">
         <div class="container text-left">

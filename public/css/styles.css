@@ -472,16 +472,19 @@ nav {
     padding: 100px 30px 50px 50px;
 }
 .container-pesan{
-    border: 0.3px solid #BAB4B4;
+    border: 0.3px solid rgb(221, 219, 219);
     border-radius: 10px;
-    padding: 20px 0 20px 25px;
+    padding: 20px 25px 20px 25px;
     box-sizing: border-box;
     background-color: white;
+}
+.mActive{
+    background-color: rgb(221, 219, 219);
 }
 .text-date-bod{
     font-size: 14px;
     font-weight: 500;
-    color: #8A7E7E;
+    color: #686767;
 }
 .card-title-bod{
     font-weight: 600;
