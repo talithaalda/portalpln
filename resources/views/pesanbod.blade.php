@@ -28,7 +28,7 @@
         <div class="row g-0">
             <div class="col-md-5 list-pesan">
                 <div class="overflow-auto d-flex gap-3"
-                    style="max-height: 1100px; flex-direction: column;padding: 0px 20px 10px 20px">
+                    style="max-height: 900px; flex-direction: column;padding: 0px 20px 10px 20px">
                     @foreach ($pesanbod['data'] as $p)
                         @php
                             $index = $loop->index;

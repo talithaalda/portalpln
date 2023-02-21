@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\apiController;
+use  App\Http\Controllers\functionController;
+use Illuminate\Pagination\Paginator;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,14 @@ use App\Http\Controllers\apiController;
 */
 
 
-Route::get('/', [apiController::class,'beranda']);
+Route::get('/', function(){
+    $messages = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/news/get_messages_bod?skey=FULLPOWERRR'), true);
+        return view('beranda',[
+            "active"=>'beranda',
+            "title"=>'Beranda',
+            "pesanbod"=> $messages
+        ]);
+});
 
 Route::get('/aplikasi', function () {
     return view('aplikasi',[
@@ -25,24 +33,37 @@ Route::get('/aplikasi', function () {
     ]);
 });
 Route::get('/publikasi', function () {
+    $publikasi = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/magazine/get_list?skey=FULLPOWERRR'), true);
+    $paginate = functionController::paginate($publikasi['data']);
+    $paginate->withPath('/publikasi');
     return view('publikasi',[
         "active"=>'publikasi',
-        "title"=>'Publikasi'
+        "title"=>'Publikasi',
+        "publikasi"=> $paginate,
+        "allpub"=>$publikasi['data']
 
     ]);
 });
 Route::get('/artikel', function () {
+    $artikel = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/article/get_list_by_category?skey=FULLPOWERRR'), true);
+    $paginate = functionController::paginate($artikel['data']);
+    $paginate->withPath('/artikel');
     return view('artikel',[
         "active"=>'artikel',
-        "title"=>'Artikel'
-
+        "title"=>'Artikel',
+        "artikel"=>$paginate,
+        "allartikel"=>$artikel['data']
     ]);
 });
 Route::get('/pengumuman', function () {
+    $pengumuman = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/news/get_announcements?skey=FULLPOWERRR'), true);
+    $paginate = functionController::paginate($pengumuman['data']);
+    $paginate->withPath('/artikel');
     return view('pengumuman',[
         "active"=>'pengumuman',
-        "title"=>'Pengumuman'
-
+        "title"=>'Pengumuman',
+        "pengumuman"=>$paginate,
+        "allnews"=>$pengumuman['data']
     ]);
 });
 Route::get('/kotakide-calendar', function () {
@@ -80,44 +101,60 @@ Route::get('/kotakide-money', function () {
         "menu"=>'money'
     ]);
 });
-Route::get('publikasi/detailpublikasi', function () {
+Route::get('publikasi/{publikasi:id}', function ($idpublikasi) {
+    $publikasi = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/magazine/get_list?skey=FULLPOWERRR'), true);
     return view('detailpublikasi',[
         "active"=>'publikasi',
-        "title"=>'Detail Publikasi'
+        "title"=>"Publikasi | {$publikasi['data'][$idpublikasi]['MGJUDUL']}",
+        "publikasi"=>$publikasi['data'][$idpublikasi],
+        "allpub"=>$publikasi
     ]);
 });
-Route::get('artikel/detailartikel', function () {
+Route::get('artikel/{artikel:id}', function ($idartikel) {
+    $artikel = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/article/get_list_by_category?skey=FULLPOWERRR'), true);
     return view('detailartikel',[
         "active"=>'artikel',
-        "title"=>'Detail Artikel'
+        "title"=>"Artikel | {$artikel['data'][$idartikel]['ARJUDUL']}",
+        "artikel"=>$artikel['data'][$idartikel],
+        "allartikel"=>$artikel
 
     ]);
 });
-Route::get('pengumuman/detailpengumuman', function () {
+Route::get('pengumuman/{pengumuman:id}', function ($idpengumuman) {
+    $pengumuman = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/news/get_announcements?skey=FULLPOWERRR'), true);
     return view('detailpengumuman',[
         "active"=>'pengumuman',
-        "title"=>'Detail Pengumuman'
-
+        "title"=>"Pengumuman | {$pengumuman['data'][$idpengumuman]['NFJUDUL']}",
+        "pengumuman"=>$pengumuman['data'][$idpengumuman],
+        "allnews"=>$pengumuman
     ]);
 });
 Route::get('kotakide/detailkotakide', function () {
     return view('kotakide.detailkotakide',[
         "active"=>'kotakide',
         "title"=>'Detail Kotak Ide',
-
+    ]);
+});
+Route::get('/pesanbod',function(){
+    $messages = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/news/get_messages_bod?skey=FULLPOWERRR'), true);
+    return view('pesanbod',[
+        "active"=>'pesanbod',
+        "title"=>'Pesan BOD',
+        "pesanbod"=> $messages,
+        "mActive"=>'none'
 
     ]);
 });
-// Route::get('/pesanbod', function () {
-//     return view('pesanbod',[
-//         "active"=>'pesanbod',
-//         "title"=>'Pesan BOD'
-
-//     ]);
-// });
-Route::get('/pesanbod', [apiController::class,'pesanbod']);
-Route::get('/pesanbod/{message:id}',[apiController::class,'showpesanbod']);
-
+Route::get('/pesanbod/{message:id}',function($idmessage){
+    $messages = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/news/get_messages_bod?skey=FULLPOWERRR'), true);
+    return view('detail-pesan',[
+        "title"=> "Pesan BOD | {$messages['data'][$idmessage]['NFJUDUL']}",
+        "active"=>'pesanbod',
+        "pesan"=> $messages['data'][$idmessage],
+        "pesanbod"=> $messages,
+        "mActive"=>$idmessage
+    ]);
+});
 Route::get('/login', function () {
     return view('login',[
         "title"=>'Login'

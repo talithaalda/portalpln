@@ -26,202 +26,83 @@
                     <span class="txt-title">ARTIKEL TERKINI</span>
                     <a href=""></a>
                 </div>
-                <a href="/artikel/detailartikel">
-                    <div class="row no-gutters card-publikasi">
-                        <div class="col-md-4 g-0 ">
-                            <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
-                        </div>
-                        <div class="col-md-8 card-body-publikasi">
-                            <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
-                                </h5>
-                                <h6 class="text-muted">10 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
-                                    sollicitudin rhoncus libero libero vitae. Consequat suspendisse netus
-                                    dignissim sed consectetur mauris elementum lectus magna. Phasellus cursus
-                                    commodo pulvinar egestas velit egestas non in...</p>
+                @foreach ($artikel as $key => $a)
+                    <a href="/artikel/{{ $key }}">
+                        <div class="row no-gutters card-publikasi">
+                            <div class="col-md-4 g-0 fill ">
+                                <img class=" rounded-end img-pub" src="{{ $a['media'][0]['MDFPATH'] }}" alt="...">
+                            </div>
+                            <div class="col-md-8 card-body-publikasi">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="padding-top:10px ">{{ $a['ARJUDUL'] }}
+                                    </h5>
+                                    <h6 class="text-muted">{{ tgl_indo(substr($a['CREATED'], 0, 10)) }}</h6>
+                                    <p class="card-text mt-3">{{ substr($a['ARTEXT'], 0, 200) }}...</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                <a href="/artikel/detailartikel">
-                    <div class="row no-gutters card-publikasi">
-                        <div class="col-md-4 g-0">
-                            <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
-                        </div>
-                        <div class="col-md-8 card-body-publikasi">
-                            <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
-                                </h5>
-                                <h6 class="text-muted">10 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
-                                    sollicitudin rhoncus libero libero vitae. Consequat suspendisse netus
-                                    dignissim sed consectetur mauris elementum lectus magna. Phasellus cursus
-                                    commodo pulvinar egestas velit egestas non in...</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="/artikel/detailartikel">
-                    <div class="row no-gutters card-publikasi">
-                        <div class="col-md-4 g-0">
-                            <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
-                        </div>
-                        <div class="col-md-8 card-body-publikasi">
-                            <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
-                                </h5>
-                                <h6 class="text-muted">10 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
-                                    sollicitudin rhoncus libero libero vitae. Consequat suspendisse netus
-                                    dignissim sed consectetur mauris elementum lectus magna. Phasellus cursus
-                                    commodo pulvinar egestas velit egestas non in...</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="/artikel/detailartikel">
-                    <div class="row no-gutters card-publikasi">
-                        <div class="col-md-4 g-0">
-                            <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
-                        </div>
-                        <div class="col-md-8 card-body-publikasi">
-                            <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
-                                </h5>
-                                <h6 class="text-muted">10 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
-                                    sollicitudin rhoncus libero libero vitae. Consequat suspendisse netus
-                                    dignissim sed consectetur mauris elementum lectus magna. Phasellus cursus
-                                    commodo pulvinar egestas velit egestas non in...</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="/artikel/detailartikel">
-                    <div class="row no-gutters card-publikasi">
-                        <div class="col-md-4 g-0 ">
-                            <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
-                        </div>
-                        <div class="col-md-8 card-body-publikasi">
-                            <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
-                                </h5>
-                                <h6 class="text-muted">10 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
-                                    sollicitudin rhoncus libero libero vitae. Consequat suspendisse netus
-                                    dignissim sed consectetur mauris elementum lectus magna. Phasellus cursus
-                                    commodo pulvinar egestas velit egestas non in...</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="/artikel/detailartikel">
-                    <div class="row no-gutters card-publikasi">
-                        <div class="col-md-4 g-0">
-                            <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
-                        </div>
-                        <div class="col-md-8 card-body-publikasi">
-                            <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
-                                </h5>
-                                <h6 class="text-muted">10 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
-                                    sollicitudin rhoncus libero libero vitae. Consequat suspendisse netus
-                                    dignissim sed consectetur mauris elementum lectus magna. Phasellus cursus
-                                    commodo pulvinar egestas velit egestas non in...</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="/artikel/detailartikel">
-                    <div class="row no-gutters card-publikasi">
-                        <div class="col-md-4 g-0 ">
-                            <img class="img-fluid rounded-end img-pub" src={{ asset('img/publikasi1.png') }} alt="...">
-                        </div>
-                        <div class="col-md-8 card-body-publikasi">
-                            <div class="card-body">
-                                <h5 class="card-title" style="padding-top:10px ">PJB Siap Natal dan Tahun Baru 2022!
-                                </h5>
-                                <h6 class="text-muted">10 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur. Viverra
-                                    sollicitudin rhoncus libero libero vitae. Consequat suspendisse netus
-                                    dignissim sed consectetur mauris elementum lectus magna. Phasellus cursus
-                                    commodo pulvinar egestas velit egestas non in...</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <div aria-label="Page navigation example" style="justify-content: center; display: flex; ">
-                    <ul class="pagination " style="box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);">
-                        <li class="page-item"><a class="page-link" href="#"><span
-                                    aria-hidden="true">&laquo;</span></a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><span
-                                    aria-hidden="true">&raquo;</span></a></li>
-                    </ul>
-                </div>
+                    </a>
+                @endforeach
+
+                {{ $artikel->links() }}
 
             </div>
 
             {{-- TERPOPULER --}}
+            @php
+                $randomData = $allartikel;
+                shuffle($randomData);
+            @endphp
 
             <div class="col-md-5 margin-left">
-                <h3 class="txt-title-right title-kotak-ide">TERPOPULER</h3>
+                <h3 class="txt-title-right title-kotak-ide">REKOMENDASI</h3>
                 <div class="line-bold"></div>
-                <div class="row" style=" margin: 10px;">
-                    <div class="col-md-2 " style="display: flex; justify-content: center">
-                        <h1 class="urutan">1</h1>
-                    </div>
-                    <div class="col">
-                        <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                        <h6 class="content-date">05 Januari 2023</h6>
-                    </div>
-                </div>
-                <div class="line-thin"></div>
-                <div class="row" style=" margin: 10px;">
-                    <div class="col-md-2 " style="display: flex; justify-content: center">
-                        <h1 class="urutan">2</h1>
-                    </div>
-                    <div class="col">
-                        <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                        <h6 class="content-date">05 Januari 2023</h6>
-                    </div>
-                </div>
-                <div class="line-thin"></div>
-                <div class="row" style=" margin: 10px;">
-                    <div class="col-md-2 " style="display: flex; justify-content: center">
-                        <h1 class="urutan">3</h1>
-                    </div>
-                    <div class="col">
-                        <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                        <h6 class="content-date">05 Januari 2023</h6>
-                    </div>
-                </div>
-                <div class="line-thin"></div>
-                <div class="row" style=" margin: 10px;">
-                    <div class="col-md-2 " style="display: flex; justify-content: center">
-                        <h1 class="urutan">4</h1>
-                    </div>
-                    <div class="col">
-                        <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                        <h6 class="content-date">05 Januari 2023</h6>
-                    </div>
-                </div>
-                <div class="line-thin"></div>
-                <div class="row" style=" margin: 10px;">
-                    <div class="col-md-2 " style="display: flex; justify-content: center">
-                        <h1 class="urutan">5</h1>
-                    </div>
-                    <div class="col">
-                        <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                        <h6 class="content-date">05 Januari 2023</h6>
-                    </div>
-                </div>
-
+                @foreach (array_slice($randomData, 0, 5) as $a)
+                    <?php
+                    $key = array_search($a['ARID'], array_column($allartikel, 'ARID'));
+                    ?>
+                    <a href="/artikel/{{ $key }}">
+                        <div class="row" style=" margin: 10px;">
+                            <div class="col-md-2 " style="display: flex; justify-content: center">
+                                <h1 class="urutan">{{ $loop->index + 1 }}</h1>
+                            </div>
+                            <div class="col">
+                                <h3 class="content-title">{{ $a['ARJUDUL'] }}</h3>
+                                <h6 class="content-date">{{ tgl_indo(substr($a['CREATED'], 0, 10)) }}</h6>
+                            </div>
+                        </div>
+                        <div class="line-thin"></div>
+                    </a>
+                @endforeach
             </div>
+
         </div>
     </div>
+
+
+    @php
+        function tgl_indo($tanggal)
+        {
+            $bulan = [
+                1 => 'Januari',
+                'Februari',
+                'Maret',
+                'April',
+                'Mei',
+                'Juni',
+                'Juli',
+                'Agustus',
+                'September',
+                'Oktober',
+                'November',
+                'Desember',
+            ];
+            $pecahkan = explode('-', $tanggal);
+        
+            // variabel pecahkan 0 = tanggal
+            // variabel pecahkan 1 = bulan
+            // variabel pecahkan 2 = tahun
+            return $pecahkan[2] . ' ' . $bulan[(int) $pecahkan[1]] . ' ' . $pecahkan[0];
+        }
+    @endphp
 @endsection
