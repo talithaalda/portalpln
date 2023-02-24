@@ -29,7 +29,7 @@
                 <div class="offcanvas-body" style="margin-left: 25px; margin-right: 35px">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <div class="sidebar-mobile mt-3">
-                            <li class="nav-item {{ $active == 'aplikasi' ? 'active' : ' ' }}">
+                            <li class="nav-item {{ $active == 'beranda' ? 'active' : ' ' }}">
                                 <a href="/">
                                     <img src="{{ asset('img/home.png') }}" alt="aplikasi" class="icon" />
                                     <span class="txt-item">Beranda</span>
@@ -73,9 +73,15 @@
                             </a>
                         </li>
                         <li class="nav-item {{ $active == 'kotakide' ? 'active' : ' ' }}">
-                            <a href="/kotakide-calendar">
+                            <a href="/kotakide-latest">
                                 <img src={{ asset('img/kotakide.png') }} alt="aplikasi" class="icon" />
                                 <span class="txt-item">Kotak Ide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item {{ $active == 'kontak' ? 'active' : ' ' }}">
+                            <a href="/kotakide-latest">
+                                <img src={{ asset('img/kontak.png') }} alt="aplikasi" class="icon" />
+                                <span class="txt-item">Kontak</span>
                             </a>
                         </li>
                     </ul>

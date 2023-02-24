@@ -18,10 +18,18 @@ use Illuminate\Pagination\Paginator;
 
 Route::get('/', function(){
     $messages = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/news/get_messages_bod?skey=FULLPOWERRR'), true);
+    $publikasi = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/magazine/get_list?skey=FULLPOWERRR'), true);
+    $artikel = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/article/get_list_by_category?skey=FULLPOWERRR'), true);
+    $pengumuman = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/news/get_announcements?skey=FULLPOWERRR'), true);
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_newest?skey=FULLPOWERRR'), true);
         return view('beranda',[
             "active"=>'beranda',
             "title"=>'Beranda',
-            "pesanbod"=> $messages
+            "pesanbod"=> $messages['data'],
+            "pengumuman"=>$pengumuman['data'],
+            "artikel"=>$artikel['data'],
+            "kotakide"=>$kotakide['data'],
+            "publikasi"=>$publikasi['data']
         ]);
 });
 
@@ -66,39 +74,73 @@ Route::get('/pengumuman', function () {
         "allnews"=>$pengumuman['data']
     ]);
 });
-Route::get('/kotakide-calendar', function () {
-    return view('kotakide.kotakide-calendar',[
+Route::get('/kotakide-latest', function () {
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_newest?skey=FULLPOWERRR'), true);
+    $rating = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_top_rated?skey=FULLPOWERRR'), true);
+    $paginate = functionController::paginate($kotakide['data']);
+    $paginate->withPath('/kotakide-latest');
+    return view('kotakide.kotakide-latest',[
         "active"=>'kotakide',
         "title"=>'Kotak Ide',
-        "menu"=>'calendar'
+        "menu"=>'latest',
+        "kotakide"=>$paginate,
+        "allide"=>$kotakide['data'],
+        "rating"=>$rating['data']
     ]);
 });
-Route::get('/kotakide-star', function () {
-    return view('kotakide.kotakide-star',[
+Route::get('/kotakide-rating', function () {
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_top_rated?skey=FULLPOWERRR'), true);
+    $paginate = functionController::paginate($kotakide['data']);
+    $paginate->withPath('/kotakide-rating');
+    return view('kotakide.kotakide-rating',[
         "active"=>'kotakide',
         "title"=>'Kotak Ide',
-        "menu"=>'star'
+        "menu"=>'rating',
+        "kotakide"=>$paginate,
+        "rating"=>$kotakide['data'],
+        "allide"=>$kotakide['data']
     ]);
 });
-Route::get('/kotakide-person', function () {
-    return view('kotakide.kotakide-person',[
+Route::get('/kotakide-people', function () {
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_people?skey=FULLPOWERRR'), true);
+    $rating = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_top_rated?skey=FULLPOWERRR'), true);
+    $paginate = functionController::paginate($kotakide['data']);
+    $paginate->withPath('/kotakide-people');
+    return view('kotakide.kotakide-people',[
         "active"=>'kotakide',
         "title"=>'Kotak Ide',
-        "menu"=>'person'
+        "menu"=>'people',
+        "kotakide"=>$paginate,
+        "allide"=>$kotakide['data'],
+        "rating"=>$rating['data']
     ]);
 });
 Route::get('/kotakide-planet', function () {
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_planet?skey=FULLPOWERRR'), true);
+    $rating = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_top_rated?skey=FULLPOWERRR'), true);
+    $paginate = functionController::paginate($kotakide['data']);
+    $paginate->withPath('/kotakide-planet');
     return view('kotakide.kotakide-planet',[
         "active"=>'kotakide',
         "title"=>'Kotak Ide',
-        "menu"=>'planet'
+        "menu"=>'planet',
+        "kotakide"=>$paginate,
+        "allide"=>$kotakide['data'],
+        "rating"=>$rating['data']
     ]);
 });
-Route::get('/kotakide-money', function () {
-    return view('kotakide.kotakide-money',[
+Route::get('/kotakide-profit', function () {
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_profit?skey=FULLPOWERRR'), true);
+    $rating = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_top_rated?skey=FULLPOWERRR'), true);
+    $paginate = functionController::paginate($kotakide['data']);
+    $paginate->withPath('/kotakide-profit');
+    return view('kotakide.kotakide-profit',[
         "active"=>'kotakide',
         "title"=>'Kotak Ide',
-        "menu"=>'money'
+        "menu"=>'profit',
+        "kotakide"=>$paginate,
+        "allide"=>$kotakide['data'],
+        "rating"=>$rating['data']
     ]);
 });
 Route::get('publikasi/{publikasi:id}', function ($idpublikasi) {
@@ -129,10 +171,49 @@ Route::get('pengumuman/{pengumuman:id}', function ($idpengumuman) {
         "allnews"=>$pengumuman
     ]);
 });
-Route::get('kotakide/detailkotakide', function () {
+Route::get('kotakide-latest/{kotakide:id}', function ($idkotakide) {
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_newest?skey=FULLPOWERRR'), true);
     return view('kotakide.detailkotakide',[
         "active"=>'kotakide',
-        "title"=>'Detail Kotak Ide',
+        "title"=>"Detail Kotak Ide | {$kotakide['data'][$idkotakide]['IBJUDUL']}",
+        "kotakide"=>$kotakide['data'][$idkotakide],
+        "allide"=>$kotakide
+    ]);
+});
+Route::get('kotakide-rating/{kotakide:id}', function ($idkotakide) {
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_top_rated?skey=FULLPOWERRR'), true);
+    return view('kotakide.detailkotakide',[
+        "active"=>'kotakide',
+        "title"=>"Detail Kotak Ide | {$kotakide['data'][$idkotakide]['IBJUDUL']}",
+        "kotakide"=>$kotakide['data'][$idkotakide],
+        "allide"=>$kotakide
+    ]);
+});
+Route::get('kotakide-people/{kotakide:id}', function ($idkotakide) {
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_people?skey=FULLPOWERRR'), true);
+    return view('kotakide.detailkotakide',[
+        "active"=>'kotakide',
+        "title"=>"Detail Kotak Ide | {$kotakide['data'][$idkotakide]['IBJUDUL']}",
+        "kotakide"=>$kotakide['data'][$idkotakide],
+        "allide"=>$kotakide
+    ]);
+});
+Route::get('kotakide-planet/{kotakide:id}', function ($idkotakide) {
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_planet?skey=FULLPOWERRR'), true);
+    return view('kotakide.detailkotakide',[
+        "active"=>'kotakide',
+        "title"=>"Detail Kotak Ide | {$kotakide['data'][$idkotakide]['IBJUDUL']}",
+        "kotakide"=>$kotakide['data'][$idkotakide],
+        "allide"=>$kotakide
+    ]);
+});
+Route::get('kotakide-profit/{kotakide:id}', function ($idkotakide) {
+    $kotakide = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/idea_box/get_list_profit?skey=FULLPOWERRR'), true);
+    return view('kotakide.detailkotakide',[
+        "active"=>'kotakide',
+        "title"=>"Detail Kotak Ide | {$kotakide['data'][$idkotakide]['IBJUDUL']}",
+        "kotakide"=>$kotakide['data'][$idkotakide],
+        "allide"=>$kotakide
     ]);
 });
 Route::get('/pesanbod',function(){

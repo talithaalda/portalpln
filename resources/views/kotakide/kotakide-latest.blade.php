@@ -28,7 +28,7 @@
                 </div>
                 @include('kotakide.menu')
                 @foreach ($kotakide as $key => $i)
-                    <a href="/kotakide-planet/{{ $key }}">
+                    <a href="/kotakide-latest/{{ $key }}">
                         <div class="row no-gutters card-publikasi">
                             <div class="col-md-4 g-0 ">
                                 @if ($i['media'] != null)
@@ -49,6 +49,7 @@
                                     @else
                                         <p class="card-text">{{ substr($i['IBTEXT'], 0, 200) }}...</p>
                                     @endif
+
                                 </div>
                             </div>
                         </div>

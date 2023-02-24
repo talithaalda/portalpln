@@ -14,4 +14,12 @@ class functionController extends Controller
         $items = $items instanceof Collection ? $items : Collection::make($items);
         return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
     }
+    function searchForId($id, $array) {
+        foreach ($array as $key => $val) {
+            if ($val['IBID'] === $id) {
+                return $key;
+            }
+        }
+        return null;
+     }
 }

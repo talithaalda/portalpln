@@ -28,7 +28,7 @@
                 </div>
                 @include('kotakide.menu')
                 @foreach ($kotakide as $key => $i)
-                    <a href="/kotakide-planet/{{ $key }}">
+                    <a href="/kotakide-people/{{ $key }}">
                         <div class="row no-gutters card-publikasi">
                             <div class="col-md-4 g-0 ">
                                 @if ($i['media'] != null)
