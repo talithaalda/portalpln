@@ -40,6 +40,20 @@ Route::get('/aplikasi', function () {
 
     ]);
 });
+Route::get('/kontak', function () {
+    return view('kontak',[
+        "active"=>'kontak',
+        "title"=>'Kontak'
+
+    ]);
+});
+Route::get('/kontak/1', function () {
+    return view('detail-kontak',[
+        "active"=>'kontak',
+        "title"=>'Kontak'
+
+    ]);
+});
 Route::get('/publikasi', function () {
     $publikasi = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/magazine/get_list?skey=FULLPOWERRR'), true);
     $paginate = functionController::paginate($publikasi['data']);
@@ -66,7 +80,7 @@ Route::get('/artikel', function () {
 Route::get('/pengumuman', function () {
     $pengumuman = json_decode(file_get_contents('http://192.168.11.15/moffice2/index.php/news/get_announcements?skey=FULLPOWERRR'), true);
     $paginate = functionController::paginate($pengumuman['data']);
-    $paginate->withPath('/artikel');
+    $paginate->withPath('/pengumuman');
     return view('pengumuman',[
         "active"=>'pengumuman',
         "title"=>'Pengumuman',

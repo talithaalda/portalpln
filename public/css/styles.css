@@ -645,6 +645,31 @@ a {
 .active .page-link{
     background-color: #00A2E9 !important;
 }
+.judul-detail-kontak{
+    font-weight: 600;
+    font-size: 18px;
+}
+.isi-detail-kontak{
+    font-weight: 400;
+    font-size: 18px;
+}
+.detail-kontak{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container-kontak{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+
+
 @media (min-width: 1200px) {
 
 .header-bod {
@@ -914,6 +939,26 @@ a {
         width: 100%;
         justify-content: space-between;
         margin: auto;
+    }
+    .judul-detail-kontak{
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .isi-detail-kontak{
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .detail-kontak{
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .container-kontak{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 }
 

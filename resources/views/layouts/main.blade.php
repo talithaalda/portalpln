@@ -79,7 +79,7 @@
                             </a>
                         </li>
                         <li class="nav-item {{ $active == 'kontak' ? 'active' : ' ' }}">
-                            <a href="/kotakide-latest">
+                            <a href="/kontak">
                                 <img src={{ asset('img/kontak.png') }} alt="aplikasi" class="icon" />
                                 <span class="txt-item">Kontak</span>
                             </a>
