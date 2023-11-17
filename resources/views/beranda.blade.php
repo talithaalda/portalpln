@@ -258,23 +258,18 @@
 
     {{-- PESAN BOD --}}
 
-    <div class="margin">
-        <span class="txt-title">PESAN</span>
-        <span class="txt-title-italic">BOARD OF DIRECTORS</span>
-        <div class="pesanbod text-center">
-            <img class="mt-5" src={{ asset('img/chat.png') }} alt="">
-            <p class="header-bod mt-3  text-center">PETUAH (Pesan Untuk Diamanahkan) Edisi Gong Matua Hasibuan
-                (Direktur
-                Utama PT PJB)
-                Vol.3</p>
-            <p class="desc-bod  text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor
-                incididunt ut
-                labore et dolore
-                magna aliqua. Ut enim ad minim veniam,...</p>
-        </div>
+    <a href="pesanbod/0">
+        <div class="margin">
+            <span class="txt-title">PESAN</span>
+            <span class="txt-title-italic">BOARD OF DIRECTORS</span>
+            <div class="pesanbod text-center">
+                <img class="mt-5" src={{ asset('img/chat.png') }} alt="">
+                <p class="header-bod mt-3  text-center">{{ $pesanbod[0]['NFJUDUL'] }}</p>
+                <p class="desc-bod  text-center">{{ substr($pesanbod[0]['NFJUDUL'], 0, 150) }}</p>
+            </div>
 
-    </div>
+        </div>
+    </a>
 
     {{-- PENGUMUMAN --}}
 
@@ -297,16 +292,14 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title" style="padding-top:10px ">Testimoni Pegawai
-                                                Subholding
-                                                Energi Primer
+                                            <h5 class="card-title" style="padding-top:10px ">
+                                                {{ $pengumuman[0]['NFJUDUL'] }}
                                             </h5>
-                                            <h6 class="text-muted">05 Januari 2023</h6>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit,
-                                                sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua....</p>
-                                            <a href="" class="mt-5 float-end mb-4 all-apps">Baca Lebih
+                                            <h6 class="text-muted">
+                                                {{ tgl_indo(substr($pengumuman[0]['CREATED'], 0, 10)) }}
+                                            </h6>
+                                            <p class="card-text">{{ substr($pengumuman[0]['NFTEXT'], 0, 200) }}...</p>
+                                            <a href="/pengumuman/0" class="mt-5 float-end mb-4 all-apps">Baca Lebih
                                                 Banyak</a>
                                         </div>
                                     </div>
@@ -321,16 +314,14 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title" style="padding-top:10px ">Testimoni Pegawai
-                                                Subholding
-                                                Energi Primer
+                                            <h5 class="card-title" style="padding-top:10px ">
+                                                {{ $pengumuman[1]['NFJUDUL'] }}
                                             </h5>
-                                            <h6 class="text-muted">05 Januari 2023</h6>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit,
-                                                sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua....</p>
-                                            <a href="" class="mt-5 float-end mb-4 all-apps">Baca Lebih
+                                            <h6 class="text-muted">
+                                                {{ tgl_indo(substr($pengumuman[1]['CREATED'], 0, 10)) }}
+                                            </h6>
+                                            <p class="card-text">{{ substr($pengumuman[1]['NFTEXT'], 0, 200) }}...</p>
+                                            <a href="/pengumuman/1" class="mt-5 float-end mb-4 all-apps">Baca Lebih
                                                 Banyak</a>
                                         </div>
                                     </div>
@@ -345,16 +336,13 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title" style="padding-top:10px ">Testimoni Pegawai
-                                                Subholding
-                                                Energi Primer
+                                            <h5 class="card-title" style="padding-top:10px ">
+                                                {{ $pengumuman[2]['NFJUDUL'] }}
                                             </h5>
-                                            <h6 class="text-muted">05 Januari 2023</h6>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit,
-                                                sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua....</p>
-                                            <a href="" class="mt-5 float-end mb-4 all-apps">Baca Lebih
+                                            <h6 class="text-muted">
+                                                {{ tgl_indo(substr($pengumuman[2]['CREATED'], 0, 10)) }}</h6>
+                                            <p class="card-text">{{ substr($pengumuman[2]['NFTEXT'], 0, 200) }}...</p>
+                                            <a href="/pengumuman/2" class="mt-5 float-end mb-4 all-apps">Baca Lebih
                                                 Banyak</a>
                                         </div>
                                     </div>
@@ -391,27 +379,15 @@
             <div class="col-md-5 margin-left">
                 <h3 class="txt-title-right title-kotak-ide">KOTAK IDE</h3>
                 <div class="line-bold"></div>
-                <div class="" style=" margin: 10px;">
-                    <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                    <h6 class="content-date">05 Januari 2023</h6>
-
-                </div>
-                <div class="line-thin"></div>
-                <div class="" style=" margin: 10px;">
-                    <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                    <h6 class="content-date">05 Januari 2023</h6>
-
-                </div>
-                <div class="line-thin"></div>
-                <div class="" style=" margin: 10px;">
-                    <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                    <h6 class="content-date">05 Januari 2023</h6>
-
-                </div>
-                <div class="line-thin"></div>
-                <div class="text-center" style="margin:20px;">
-                    <button type="button" class="btn btn-outline-dark">Lihat Lebih Banyak Kotak Ide</button>
-                </div>
+                @foreach (array_slice($kotakide, 0, 5) as $key => $i)
+                    <a href="/kotakide-latest/{{ $key }}">
+                        <div class="" style=" margin: 10px;">
+                            <h3 class="content-title">{{ $i['IBJUDUL'] }}</h3>
+                            <h6 class="content-date">{{ tgl_indo(substr($i['CREATED'], 0, 10)) }}</h6>
+                        </div>
+                        <div class="line-thin"></div>
+                    </a>
+                @endforeach
             </div>
         </div>
     </div>
@@ -427,107 +403,29 @@
                     <a href=""><span class="selengkapnya">Selengkapnya <i class="fa-solid fa-angle-right"
                                 style="color:#0A436B"></i></span></a>
                 </div>
+                @foreach (array_slice($artikel, 0, 5) as $key => $a)
+                    <a href="/artikel/{{ $key }}">
+                        <div class="card " style="margin:20px 0 25px 0;border: none;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="{{ $a['media'][0]['MDFPATH'] }}" class="card-img" alt="..."
+                                        width="288px" height="172px">
+                                </div>
+                                <div class="col-md-8" style="padding: 0">
+                                    <div class="card-body-artikel" style="padding: 0">
+                                        <h5 class="card-title">{{ $a['ARJUDUL'] }}
+                                        </h5>
+                                        <h6 class="text-muted">{{ tgl_indo(substr($a['CREATED'], 0, 10)) }}</h6>
+                                        <p class="card-text">{{ substr($a['ARTEXT'], 0, 200) }}...
+                                        </p>
 
-                <div class="card " style="margin:20px 0 25px 0;border: none;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src={{ asset('img/artikel1.png') }} class="card-img" alt="..." width="288px"
-                                height="172px">
-                        </div>
-                        <div class="col-md-8" style="padding: 0">
-                            <div class="card-body-artikel" style="padding: 0">
-                                <h5 class="card-title">PJB Siap Siaga Natal dan Tahun Baru 2022
-                                </h5>
-                                <h6 class="text-muted">05 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam....
-                                </p>
-
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card " style="margin:20px 0 25px 0;border: none;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src={{ asset('img/artikel1.png') }} class="card-img" alt="..." width="288px"
-                                height="172px">
-                        </div>
-                        <div class="col-md-8" style="padding: 0">
-                            <div class="card-body-artikel" style="padding: 0">
-                                <h5 class="card-title">PJB Siap Siaga Natal dan Tahun Baru 2022
-                                </h5>
-                                <h6 class="text-muted">05 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam....
-                                </p>
+                    </a>
+                @endforeach
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card " style="margin:20px 0 25px 0;border: none;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src={{ asset('img/artikel1.png') }} class="card-img" alt="..." width="288px"
-                                height="172px">
-                        </div>
-                        <div class="col-md-8" style="padding: 0">
-                            <div class="card-body-artikel" style="padding: 0">
-                                <h5 class="card-title">PJB Siap Siaga Natal dan Tahun Baru 2022
-                                </h5>
-                                <h6 class="text-muted">05 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam....
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card " style="margin:20px 0 25px 0;border: none;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src={{ asset('img/artikel1.png') }} class="card-img" alt="..." width="288px"
-                                height="172px">
-                        </div>
-                        <div class="col-md-8" style="padding: 0">
-                            <div class="card-body-artikel" style="padding: 0">
-                                <h5 class="card-title">PJB Siap Siaga Natal dan Tahun Baru 2022
-                                </h5>
-                                <h6 class="text-muted">05 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam....
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card " style="margin:20px 0 25px 0;border: none;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src={{ asset('img/artikel1.png') }} class="card-img" alt="..." width="288px"
-                                height="172px">
-                        </div>
-                        <div class="col-md-8" style="padding: 0">
-                            <div class="card-body-artikel" style="padding: 0">
-                                <h5 class="card-title">PJB Siap Siaga Natal dan Tahun Baru 2022
-                                </h5>
-                                <h6 class="text-muted">05 Januari 2023</h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam....
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             {{-- PUBLIKASI --}}
@@ -535,28 +433,16 @@
             <div class="col-md-5 margin-left">
                 <h3 class="txt-title-right">PUBLIKASI</h3>
                 <div class="line-bold"></div>
-                <div class="" style=" margin: 10px;">
-                    <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                    <h6 class="content-date">05 Januari 2023</h6>
+                @foreach (array_slice($publikasi, 0, 3) as $key => $p)
+                    <a href="/publikasi/{{ $key }}">
+                        <div class="" style=" margin: 10px;">
+                            <h3 class="content-title">{{ $p['MGJUDUL'] }}</h3>
+                            <h6 class="content-date">{{ tgl_indo(substr($p['CREATED'], 0, 10)) }}</h6>
+                        </div>
+                        <div class="line-thin"></div>
+                    </a>
+                @endforeach
 
-                </div>
-                <div class="line-thin"></div>
-                <div class="" style=" margin: 10px;">
-                    <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                    <h6 class="content-date">05 Januari 2023</h6>
-
-                </div>
-                <div class="line-thin"></div>
-                <div class="" style=" margin: 10px;">
-                    <h3 class="content-title">Melompat Lebih Tinggi Untuk Mencapai Kurva Baru PJB - Edisi 123</h3>
-                    <h6 class="content-date">05 Januari 2023</h6>
-
-                </div>
-                <div class="line-thin"></div>
-                <div class="text-center" style="margin:20px;">
-                    <a href="/publikasi">
-                        <button type="button" class="btn btn-outline-dark">Lihat Lebih Banyak Publikasi</button></a>
-                </div>
 
 
                 {{-- UNDUH --}}
@@ -667,4 +553,29 @@
             </div>
         </div>
     </div>
+    @php
+        function tgl_indo($tanggal)
+        {
+            $bulan = [
+                1 => 'Januari',
+                'Februari',
+                'Maret',
+                'April',
+                'Mei',
+                'Juni',
+                'Juli',
+                'Agustus',
+                'September',
+                'Oktober',
+                'November',
+                'Desember',
+            ];
+            $pecahkan = explode('-', $tanggal);
+        
+            // variabel pecahkan 0 = tanggal
+            // variabel pecahkan 1 = bulan
+            // variabel pecahkan 2 = tahun
+            return $pecahkan[2] . ' ' . $bulan[(int) $pecahkan[1]] . ' ' . $pecahkan[0];
+        }
+    @endphp
 @endsection

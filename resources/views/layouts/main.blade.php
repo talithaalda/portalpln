@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ $title }}</title>
+    <link rel="shortcut icon" href={{ asset('img/logoShort.png') }}>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/8b992594d2.js" crossorigin="anonymous"></script>
@@ -28,7 +29,7 @@
                 <div class="offcanvas-body" style="margin-left: 25px; margin-right: 35px">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <div class="sidebar-mobile mt-3">
-                            <li class="nav-item {{ $active == 'aplikasi' ? 'active' : ' ' }}">
+                            <li class="nav-item {{ $active == 'beranda' ? 'active' : ' ' }}">
                                 <a href="/">
                                     <img src="{{ asset('img/home.png') }}" alt="aplikasi" class="icon" />
                                     <span class="txt-item">Beranda</span>
@@ -48,7 +49,7 @@
                             </a>
                         </li>
                         <li class="nav-item {{ $active == 'pesanbod' ? 'active' : ' ' }}">
-                            <a href="/pesanbod">
+                            <a href="/pesanbod/0">
                                 <img src="{{ asset('img/pesanbod.png') }}" alt="aplikasi" class="icon" />
                                 <span class="txt-item">Pesan BOD</span>
                             </a>
@@ -72,9 +73,15 @@
                             </a>
                         </li>
                         <li class="nav-item {{ $active == 'kotakide' ? 'active' : ' ' }}">
-                            <a href="/kotakide-calendar">
+                            <a href="/kotakide-latest">
                                 <img src={{ asset('img/kotakide.png') }} alt="aplikasi" class="icon" />
                                 <span class="txt-item">Kotak Ide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item {{ $active == 'kontak' ? 'active' : ' ' }}">
+                            <a href="/kontak">
+                                <img src={{ asset('img/kontak.png') }} alt="aplikasi" class="icon" />
+                                <span class="txt-item">Kontak</span>
                             </a>
                         </li>
                     </ul>
@@ -135,6 +142,7 @@
             </div>
         </div>
     </div>
+
     @yield('container')
     <div class="footer ">
         <div class="container text-left">

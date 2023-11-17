@@ -28,153 +28,29 @@
         <div class="row g-0">
             <div class="col-md-5 list-pesan">
                 <div class="overflow-auto d-flex gap-3"
-                    style="height: 1065px; flex-direction: column;padding: 0px 20px 10px 20px">
-                    <a href="/pesanbod/detailpesan">
-                        <div class="container-pesan">
-                            <div class="row g-0">
-                                <div class="col-md-10 g-0" style=" ">
-                                    <div class="card-title-bod">PETUAH (Pesan Untuk Diamanahkan) Edisi Gong Matua Hasibuan
-                                        (Direktur
-                                        Utama PT PJB) Vol.3</div>
-                                    <p class="card-text-bod">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam...
-                                    </p>
-                                </div>
-                                <div class="col-md-2 g-0">
-                                    <h6 class="text-date-bod">
-                                        29/11/22</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/pesanbod/detailpesan">
-                        <div class="container-pesan">
-                            <div class="row g-0">
-                                <div class="col-md-10 g-0" style=" ">
-                                    <div class="card-title-bod">PETUAH (Pesan Untuk Diamanahkan) Edisi Gong Matua
-                                        Hasibuan
-                                        (Direktur
-                                        Utama PT PJB) Vol.3</div>
-                                    <p class="card-text-bod">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam...
-                                    </p>
-                                </div>
-                                <div class="col-md-2 g-0">
-                                    <h6 class="text-date-bod">
-                                        29/11/22</h6>
+                    style="max-height: 900px; flex-direction: column;padding: 0px 20px 10px 20px">
+                    @foreach ($pesanbod['data'] as $p)
+                        @php
+                            $index = $loop->index;
+                        @endphp
+                        <a href="/pesanbod/{{ $index }}">
+                            <div class="container-pesan {{ $index == $mActive ? 'mActive' : ' ' }}">
+                                <div class="row g-0">
+                                    <div class="col-md-10 g-0" style=" ">
+                                        <div class="card-title-bod">{{ substr($p['NFJUDUL'], 0, 100) }}</div>
+                                        <p class="card-text-bod">
+                                            {{ substr($p['NFTEXT'], 0, 150) }}...
+                                        </p>
+                                    </div>
+                                    <div class="col-md-2 g-0">
+                                        <h6 class="text-date-bod">
+                                            {{ date('d/m/Y', strtotime($p['CREATED'])) }}</h6>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="/pesanbod/detailpesan">
-                        <div class="container-pesan">
-                            <div class="row g-0">
-                                <div class="col-md-10 g-0" style=" ">
-                                    <div class="card-title-bod">PETUAH (Pesan Untuk Diamanahkan) Edisi Gong Matua
-                                        Hasibuan
-                                        (Direktur
-                                        Utama PT PJB) Vol.3</div>
-                                    <p class="card-text-bod">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam...
-                                    </p>
-                                </div>
-                                <div class="col-md-2 g-0">
-                                    <h6 class="text-date-bod">
-                                        29/11/22</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/pesanbod/detailpesan">
-                        <div class="container-pesan">
-                            <div class="row g-0">
-                                <div class="col-md-10 g-0" style=" ">
-                                    <div class="card-title-bod">PETUAH (Pesan Untuk Diamanahkan) Edisi Gong Matua
-                                        Hasibuan
-                                        (Direktur
-                                        Utama PT PJB) Vol.3</div>
-                                    <p class="card-text-bod">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam...
-                                    </p>
-                                </div>
-                                <div class="col-md-2 g-0">
-                                    <h6 class="text-date-bod">
-                                        29/11/22</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/pesanbod/detailpesan">
-                        <div class="container-pesan">
-                            <div class="row g-0">
-                                <div class="col-md-10 g-0" style=" ">
-                                    <div class="card-title-bod">PETUAH (Pesan Untuk Diamanahkan) Edisi Gong Matua
-                                        Hasibuan
-                                        (Direktur
-                                        Utama PT PJB) Vol.3</div>
-                                    <p class="card-text-bod">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam...
-                                    </p>
-                                </div>
-                                <div class="col-md-2 g-0">
-                                    <h6 class="text-date-bod">
-                                        29/11/22</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/pesanbod/detailpesan">
-                        <div class="container-pesan">
-                            <div class="row g-0">
-                                <div class="col-md-10 g-0" style=" ">
-                                    <div class="card-title-bod">PETUAH (Pesan Untuk Diamanahkan) Edisi Gong Matua
-                                        Hasibuan
-                                        (Direktur
-                                        Utama PT PJB) Vol.3</div>
-                                    <p class="card-text-bod">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam...
-                                    </p>
-                                </div>
-                                <div class="col-md-2 g-0">
-                                    <h6 class="text-date-bod">
-                                        29/11/22</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/pesanbod/detailpesan">
-                        <div class="container-pesan">
-                            <div class="row g-0">
-                                <div class="col-md-10 g-0" style=" ">
-                                    <div class="card-title-bod">PETUAH (Pesan Untuk Diamanahkan) Edisi Gong Matua
-                                        Hasibuan
-                                        (Direktur
-                                        Utama PT PJB) Vol.3</div>
-                                    <p class="card-text-bod">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam...
-                                    </p>
-                                </div>
-                                <div class="col-md-2 g-0">
-                                    <h6 class="text-date-bod">
-                                        29/11/22</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    @endforeach
+
                 </div>
             </div>
             <div class="col-md-7 isi-pesan">
